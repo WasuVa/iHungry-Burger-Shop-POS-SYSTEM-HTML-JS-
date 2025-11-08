@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Order</title>
-    <link rel="stylesheet" href="Css/styles.css">
+    <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
 </head>
 
@@ -68,29 +68,89 @@
         </div>
     </nav>
 
-    <div class="container mt-5">
-        <table style="width: 40%; background-color: rgba(192, 126, 4, 0.726); border-radius: 30px;">
+    <div class="container mt-5 d-flex justify-content-center">
+        <table style="width: 90%; border-radius: 30px;">
             <tr>
-                <td style=" padding: 20px; border: 100px; border-radius: 10px;">
+                <td
+                    style="width: 40%; padding: 20px; border: 100px; border-radius: 10px; background-color: rgba(192, 126, 4, 0.726);">
                     <h1>Add New Order</h1>
                     <form style="width: 100%;">
                         <div class="mb-3">
                             <label for="customerName" class="form-label">Customer Name:</label>
-                            <input type="text" class="form-control" id="customerName" name="customerName" required>
+                            <input placeholder="Enter customer name" type="text" class="form-control" id="customerName"
+                                name="customerName" required>
                         </div>
                         <div class="mb-3">
                             <label for="orderDetails" class="form-label">Order Details:</label>
-                            <textarea id="orderDetails" name="orderDetails" class="form-control" required></textarea>
+                            <textarea placeholder="Enter order details" id="orderDetails" name="orderDetails"
+                                class="form-control" required></textarea>
                         </div>
                         <div class="mb-3">
                             <label for="orderAmount" class="form-label">Order Amount:</label>
-                            <input type="number" id="orderAmount" name="orderAmount" class="form-control" required>
+                            <input placeholder="Enter order amount" type="number" id="orderAmount" name="orderAmount"
+                                class="form-control" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Add Oder</button>
                     </form>
                 </td>
-                <td>
-                    
+                <td
+                    style="padding: 20px; border: 100px; border-radius: 10px; background-color: rgba(192, 126, 4, 0.726); text-align: center;">
+                    <h1>ITEM LIST</h1>
+                    <table style="margin: auto;">
+                        <tr>
+                            <td>
+                                <button class="press-button" style="background-color: rgba(255, 0, 0, 0.3); border: none; padding: 0; cursor: pointer; border-radius: 30px;">
+                                    <img src="img/bgr1.jpg" alt="Burger 1" width="100"
+                                        style="border-radius: 20px; margin: 10px;">
+                                </button>
+
+                            </td>
+                            <td>
+                               <button class="press-button" style="background-color: rgba(255, 0, 0, 0.3); border: none; padding: 0; cursor: pointer; border-radius: 30px;">
+                                    <img src="img/bgr2.jpg" alt="Burger 2" width="100"
+                                        style="border-radius: 20px; margin: 10px;">
+                                </button>
+                            </td>
+                            <td>
+                                <button class="press-button" style="background-color: rgba(255, 0, 0, 0.3); border: none; padding: 0; cursor: pointer; border-radius: 30px;">
+                                    <img src="img/bgr3.jpg" alt="Burger 3" width="100"
+                                        style="border-radius: 20px; margin: 10px;">
+                                </button>
+                            </td>
+                            <td>
+                                <button class="press-button" style="background-color: rgba(255, 0, 0, 0.3); border: none; padding: 0; cursor: pointer; border-radius: 30px;">
+                                    <img src="img/bgr4.jpg" alt="Burger 4" width="100"
+                                        style="border-radius: 20px; margin: 10px;">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="press-button" style="background-color: rgba(255, 0, 0, 0.3); border: none; padding: 0; cursor: pointer; border-radius: 30px;">
+                                    <img src="img/bgr5.jpg" alt="Burger 5" width="100"
+                                        style="border-radius: 20px; margin: 10px;">
+                                </button>
+                            </td>
+                            <td>
+                                <button class="press-button" style="background-color: rgba(255, 0, 0, 0.3); border: none; padding: 0; cursor: pointer; border-radius: 30px;">
+                                    <img src="img/bgr6.jpg" alt="Burger 6" width="100"
+                                        style="border-radius: 20px; margin: 10px;">
+                                </button>
+                            </td>
+                            <td>
+                                <button class="press-button" style="background-color: rgba(255, 0, 0, 0.3); border: none; padding: 0; cursor: pointer; border-radius: 30px;">
+                                    <img src="img/bgr7.jpg" alt="Burger 7" width="100"
+                                        style="border-radius: 20px; margin: 10px;">
+                                </button>
+                            </td>
+                            <td>
+                                <button class="press-button" style="background-color: rgba(255, 0, 0, 0.3); border: none; padding: 0; cursor: pointer; border-radius: 30px;">
+                                    <img src="img/bgr8.jpg" alt="Burger 8" width="100"
+                                        style="border-radius: 20px; margin: 10px;">
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
                 </td>
             </tr>
         </table>

@@ -62,7 +62,7 @@
     cursor: pointer;
     font-weight: bold;
     transition: all 0.1s ease; 
-    box-shadow: 0 4px 0 0 #0056b3;
+    box-shadow: 0 4px 0 0 #b30000;
 }
 .press-button:hover {
     background-color: #0069d9;

@@ -13,3 +13,8 @@ function updateUptime() {
 }
 document.addEventListener('DOMContentLoaded', updateUptime);
 
+const button = document.getElementById('newOrderBtn');
+const targetUrl = 'oderadd.html';
+button.addEventListener('click', function() {
+    window.location.href = targetUrl;
+});

@@ -1,26 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Order</title>
+    <link rel="stylesheet" href="Css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
 </head>
+
 <body>
-    <h1>Add New Order</h1>
-    <form>
-        <div>
-            <label for="customerName">Customer Name:</label>
-            <input type="text" id="customerName" name="customerName" required>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 shadow-lg">
+        <div class="container-fluid">
+
+            <a class="navbar-brand fw-bold text-warning fs-4" href="index.html">
+                <img src="img/burger.png" alt="iHungry-LOGO" width="150"
+                    style="border: 5px solid rgba(181, 146, 5, 0.831); border-radius: 40px; padding: 10px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#posNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="posNav">
+                <ul class="navbar-nav me-auto gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link active d-flex flex-column align-items-center" href="#">
+                            🧾 <small>Orders</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="#">
+                            🍔 <small>Menu</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="#">
+                            🪑 <small>Dine-In</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="#">
+                            🛍️ <small>Takeaway</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="#">
+                            👨‍🍳 <small>Kitchen</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="#">
+                            📊 <small>Reports</small>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="d-flex gap-2">
+                    <span class="text-white small">
+                        <i class="bi bi-stopwatch me-1"></i> <span id="uptime"
+                            style="font-size:30px; color: tomato;">00:00:00</span>
+                    </span>
+                    <button class="slide-button" id="HOME" onclick="location.href='index.html'">HOME</button>
+                    <button class="btn btn-outline-light">⚙️</button>
+                </div>
+            </div>
         </div>
-        <div>
-            <label for="orderDetails">Order Details:</label>
-            <textarea id="orderDetails" name="orderDetails" required></textarea>
-        </div>
-        <div>
-            <label for="orderAmount">Order Amount:</label>
-            <input type="number" id="orderAmount" name="orderAmount" required>
-        </div>
-        <button type="submit">Submit Order</button>
-    </form>
+    </nav>
+
+    <div class="container mt-5">
+        <table style="width: 40%; background-color: rgba(192, 126, 4, 0.726); border-radius: 30px;">
+            <tr>
+                <td style=" padding: 20px; border: 100px; border-radius: 10px;">
+                    <h1>Add New Order</h1>
+                    <form style="width: 100%;">
+                        <div class="mb-3">
+                            <label for="customerName" class="form-label">Customer Name:</label>
+                            <input type="text" class="form-control" id="customerName" name="customerName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="orderDetails" class="form-label">Order Details:</label>
+                            <textarea id="orderDetails" name="orderDetails" class="form-control" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="orderAmount" class="form-label">Order Amount:</label>
+                            <input type="number" id="orderAmount" name="orderAmount" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add Oder</button>
+                    </form>
+                </td>
+                <td>
+                    
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <script src="Js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

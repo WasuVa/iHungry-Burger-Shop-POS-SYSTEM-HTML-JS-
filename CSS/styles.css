@@ -1,3 +1,44 @@
 .btn-new-Oder{
-    
+
+}
+
+.transition-hover:hover {
+    color: #fff !important; /* Brighter white on hover */
+    opacity: 0.9;
+    transition: all 0.2s ease-in-out;
+}
+
+.bg-deep-dark {
+    background-color: #1a1a2e; 
+    color: #f0f0f0;
+}
+
+.text-system-light {
+    color: #00e676; 
+}
+
+.footer-link-group {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.footer-link-group:last-child {
+    border-right: none;
+}
+
+.transition-hover:hover {
+    color: #fff !important;
+    opacity: 0.9;
+    transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 767.98px) {
+    .footer-link-group {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .footer-link-group:last-child {
+        border-bottom: none;
+    }
 }

@@ -12,3 +12,4 @@ function updateUptime() {
     }
 }
 document.addEventListener('DOMContentLoaded', updateUptime);
+

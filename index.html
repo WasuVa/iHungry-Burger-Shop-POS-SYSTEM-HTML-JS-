@@ -62,7 +62,7 @@
                         <i class="bi bi-stopwatch me-1"></i> <span id="uptime"
                             style="font-size:30px; color: tomato;">00:00:00</span>
                     </span>
-                    <button class="btn btn-warning fw-bold">+ New Order</button>
+                    <button class="pulse-button " id="newOrderBtn">+ New Order</button>
                     <button class="btn btn-outline-light">⚙️</button>
                 </div>
             </div>
@@ -187,10 +187,29 @@
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-3 col-sm-6 text-center text-md-start footer-link-group p-2">
-                        <img src="img/burger.png" alt="MainLogo" width="150" style="padding-left: 10px;">
+                        <table>
+                            <tr>
+                                <td>
+                                    <a class="navbar-brand fw-bold text-warning fs-4" href="index.html">
+                                        <img src="img/burger.png" alt="iHungry-LOGO" width="150"
+                                            style="padding-left: 10px; padding-right: 30px;">
+                                    </a>
+                                </td>
+                                <td>
+                                    <span
+                                        style="font-size: 14px; color: white;">
+                                        iHungry - Burger Shop<br>
+                                        123 Colombo Rd, Colombo<br>
+                                        Phone: (123) 456-7890<br>
+                                        Email: info@ihungry.com <br>
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 text-center footer-link-group p-2">
-                        <p class="mb-1 fw-bold text-uppercase small text-secondary">POS Actions</p>
+                        <p class="mb-1 fw-bold text-uppercase small text-secondary"></p>
                         <ul class="list-inline m-0">
                             <li class="list-inline-item"><a href="#"
                                     class="text-light text-decoration-none transition-hover" title="Open Drawer"><i
@@ -204,12 +223,7 @@
                         </ul>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 text-center footer-link-group p-2 mt-2 mt-md-0">
-                        <p class="mb-1 fw-bold text-uppercase small text-secondary">Support</p>
-                        <a href="#" class="text-info text-decoration-none transition-hover me-2">
-                            <i class="bi bi-chat-dots-fill me-1"></i> **Live Chat**
-                        </a>
-                        |
-                        <small class="text-white-50 ms-2">Ext. 456</small>
+                        <p class="mb-1 fw-bold text-uppercase small text-secondary"></p>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 text-center text-md-end p-2 mt-2 mt-md-0">
                         <p class="mb-1 fw-bold text-uppercase small text-secondary">System Info</p>

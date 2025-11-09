@@ -67,96 +67,166 @@
         </div>
     </nav>
 
-    <div class="container mt-5">
-        <div class="row g-4 justify-content-center">
-            <div class="col-12 col-lg-5">
-                <div class="p-4 rounded-4" style="background-color: rgba(192, 126, 4, 0.726); margin-bottom: 100px; ">
-                    <h1 class="h4 mb-3">Add New Order</h1>
-                    <form style="width: 100%;">
-                        <div class="mb-3">
-                            <label for="customerName" class="form-label">Customer Name:</label>
-                            <input placeholder="Enter customer name" type="text" class="form-control" id="customerName"
-                                name="customerName" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="orderDetails" class="form-label">Order Details:</label>
-                            <textarea placeholder="Enter order details" id="orderDetails" name="orderDetails"
-                                class="form-control" required></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="orderAmount" class="form-label">Order Amount:</label>
-                            <input placeholder="Enter order amount" type="number" id="orderAmount" name="orderAmount"
-                                class="form-control" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Add Order</button>
-                    </form>
+    <section>
+        <div class="container mt-5">
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 col-lg-5" style="width: 100%;">
+                    <div class="p-4 rounded-4" style="background-color: rgba(192, 126, 4, 0.726); margin-bottom: 20px;">
+                        <h1 class="h4 mb-3">Add New Order</h1>
+                        <form style="width: 100%;">
+                            <div class="mb-3">
+                                <label for="customerName" class="form-label">Customer Name:</label>
+                                <input placeholder="Enter customer name" type="text" class="form-control" id="customerName"
+                                    name="customerName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="orderDetails" class="form-label">Order Details:</label>
+                                <textarea placeholder="Enter order details" id="orderDetails" name="orderDetails"
+                                    class="form-control" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="orderAmount" class="form-label">Order Amount:</label>
+                                <input placeholder="Enter order amount" type="number" id="orderAmount" name="orderAmount"
+                                    class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Add Order</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
-            <div class="col-12 col-lg-7">
-                <div class="p-4 rounded-4 text-center" style="background-color: rgba(192, 126, 4, 0.726);">
-                    <h1 class="h4 mb-3">Item List</h1>
-
-                    <div class="row g-3 justify-content-center">
-                        <div class="col-6 col-sm-4 col-md-3 text-center">
-                            <button type="button" class="press-button p-0 border-0 bg-transparent" style="cursor:pointer;">
-                                <img src="img/bgr1.jpg" alt="Burger 1" class="img-fluid rounded-3" />
-                            </button>
-                            <div class="mt-1 small">Burger 1</div>
+                <div class="col-12 col-lg-7" style="width: 50%;">
+                    <div class="p-4 rounded-4 text-center" style="background-color: rgba(192, 126, 4, 0.726); height:96%;">
+                        <h1 class="h4 mb-3">BURGER TYPES</h1>
+                        <div class="row g-3 justify-content-center">
+                            <div class="col-6 col-sm-4 col-md-3 text-center">
+                                <button type="button" class="press-button p-0 border-0 bg-transparent"
+                                    style="cursor:pointer;">
+                                    <img src="img/bgr1.jpg" alt="Burger 1" class="img-fluid rounded-3" />
+                                </button>
+                                <div class="mt-1 small">Burger 1</div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 text-center">
+                                <button type="button" class="press-button p-0 border-0 bg-transparent"
+                                    style="cursor:pointer;">
+                                    <img src="img/bgr2.jpg" alt="Burger 2" class="img-fluid rounded-3" />
+                                </button>
+                                <div class="mt-1 small">Burger 2</div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 text-center">
+                                <button type="button" class="press-button p-0 border-0 bg-transparent"
+                                    style="cursor:pointer;">
+                                    <img src="img/bgr3.jpg" alt="Burger 3" class="img-fluid rounded-3" />
+                                </button>
+                                <div class="mt-1 small">Burger 3</div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 text-center">
+                                <button type="button" class="press-button p-0 border-0 bg-transparent"
+                                    style="cursor:pointer;">
+                                    <img src="img/bgr4.jpg" alt="Burger 4" class="img-fluid rounded-3" />
+                                </button>
+                                <div class="mt-1 small">Burger 4</div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 text-center">
+                                <button type="button" class="press-button p-0 border-0 bg-transparent"
+                                    style="cursor:pointer;">
+                                    <img src="img/bgr5.jpg" alt="Burger 5" class="img-fluid rounded-3" />
+                                </button>
+                                <div class="mt-1 small">Burger 5</div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 text-center">
+                                <button type="button" class="press-button p-0 border-0 bg-transparent"
+                                    style="cursor:pointer;">
+                                    <img src="img/bgr6.jpg" alt="Burger 6" class="img-fluid rounded-3" />
+                                </button>
+                                <div class="mt-1 small">Burger 6</div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 text-center">
+                                <button type="button" class="press-button p-0 border-0 bg-transparent"
+                                    style="cursor:pointer;">
+                                    <img src="img/bgr7.jpg" alt="Burger 7" class="img-fluid rounded-3" />
+                                </button>
+                                <div class="mt-1 small">Burger 7</div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 text-center">
+                                <button type="button" class="press-button p-0 border-0 bg-transparent"
+                                    style="cursor:pointer;">
+                                    <img src="img/bgr8.jpg" alt="Burger 8" class="img-fluid rounded-3" />
+                                </button>
+                                <div class="mt-1 small">Burger 8</div>
+                            </div>
                         </div>
-
-                        <div class="col-6 col-sm-4 col-md-3 text-center">
-                            <button type="button" class="press-button p-0 border-0 bg-transparent" style="cursor:pointer;">
-                                <img src="img/bgr2.jpg" alt="Burger 2" class="img-fluid rounded-3" />
-                            </button>
-                            <div class="mt-1 small">Burger 2</div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-7" style="width: 40%;">
+                    <div class="p-4 rounded-4 text-center mb-4" style="background-color: rgba(192, 126, 4, 0.726); ">
+                        <h1 class="h4 mb-3">CHIPS TYPES</h1>
+                        <div class="row g-3 justify-content-center">
+                            <div class="col-6 col-sm-4 col-md-3 text-center">
+                                <button type="button" class="press-button p-0 border-0 bg-transparent"
+                                    style="cursor:pointer;">
+                                    <img src="img/bgr1.jpg" alt="Burger 1" class="img-fluid rounded-3" />
+                                </button>
+                                <div class="mt-1 small">Burger 1</div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 text-center">
+                                <button type="button" class="press-button p-0 border-0 bg-transparent"
+                                    style="cursor:pointer;">
+                                    <img src="img/bgr2.jpg" alt="Burger 2" class="img-fluid rounded-3" />
+                                </button>
+                                <div class="mt-1 small">Burger 2</div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 text-center">
+                                <button type="button" class="press-button p-0 border-0 bg-transparent"
+                                    style="cursor:pointer;">
+                                    <img src="img/bgr3.jpg" alt="Burger 3" class="img-fluid rounded-3" />
+                                </button>
+                                <div class="mt-1 small">Burger 3</div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 text-center">
+                                <button type="button" class="press-button p-0 border-0 bg-transparent"
+                                    style="cursor:pointer;">
+                                    <img src="img/bgr4.jpg" alt="Burger 4" class="img-fluid rounded-3" />
+                                </button>
+                                <div class="mt-1 small">Burger 4</div>
+                            </div>
                         </div>
-
-                        <div class="col-6 col-sm-4 col-md-3 text-center">
-                            <button type="button" class="press-button p-0 border-0 bg-transparent" style="cursor:pointer;">
-                                <img src="img/bgr3.jpg" alt="Burger 3" class="img-fluid rounded-3" />
-                            </button>
-                            <div class="mt-1 small">Burger 3</div>
-                        </div>
-
-                        <div class="col-6 col-sm-4 col-md-3 text-center">
-                            <button type="button" class="press-button p-0 border-0 bg-transparent" style="cursor:pointer;">
-                                <img src="img/bgr4.jpg" alt="Burger 4" class="img-fluid rounded-3" />
-                            </button>
-                            <div class="mt-1 small">Burger 4</div>
-                        </div>
-
-                        <div class="col-6 col-sm-4 col-md-3 text-center">
-                            <button type="button" class="press-button p-0 border-0 bg-transparent" style="cursor:pointer;">
-                                <img src="img/bgr5.jpg" alt="Burger 5" class="img-fluid rounded-3" />
-                            </button>
-                            <div class="mt-1 small">Burger 5</div>
-                        </div>
-
-                        <div class="col-6 col-sm-4 col-md-3 text-center">
-                            <button type="button" class="press-button p-0 border-0 bg-transparent" style="cursor:pointer;">
-                                <img src="img/bgr6.jpg" alt="Burger 6" class="img-fluid rounded-3" />
-                            </button>
-                            <div class="mt-1 small">Burger 6</div>
-                        </div>
-
-                        <div class="col-6 col-sm-4 col-md-3 text-center">
-                            <button type="button" class="press-button p-0 border-0 bg-transparent" style="cursor:pointer;">
-                                <img src="img/bgr7.jpg" alt="Burger 7" class="img-fluid rounded-3" />
-                            </button>
-                            <div class="mt-1 small">Burger 7</div>
-                        </div>
-
-                        <div class="col-6 col-sm-4 col-md-3 text-center">
-                            <button type="button" class="press-button p-0 border-0 bg-transparent" style="cursor:pointer;">
-                                <img src="img/bgr8.jpg" alt="Burger 8" class="img-fluid rounded-3" />
-                            </button>
-                            <div class="mt-1 small">Burger 8</div>
+                    </div>
+                    <div class="p-4 rounded-4 text-center" style="background-color: rgba(192, 126, 4, 0.726); margin-bottom: 20px;">
+                        <h1 class="h4 mb-3">Item List2</h1>
+                        <div class="row g-3 justify-content-center">
+                            <div class="col-6 col-sm-4 col-md-3 text-center">
+                                <button type="button" class="press-button p-0 border-0 bg-transparent"
+                                    style="cursor:pointer;">
+                                    <img src="img/bgr1.jpg" alt="Burger 1" class="img-fluid rounded-3" />
+                                </button>
+                                <div class="mt-1 small">Burger 1</div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 text-center">
+                                <button type="button" class="press-button p-0 border-0 bg-transparent"
+                                    style="cursor:pointer;">
+                                    <img src="img/bgr2.jpg" alt="Burger 2" class="img-fluid rounded-3" />
+                                </button>
+                                <div class="mt-1 small">Burger 2</div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 text-center">
+                                <button type="button" class="press-button p-0 border-0 bg-transparent"
+                                    style="cursor:pointer;">
+                                    <img src="img/bgr3.jpg" alt="Burger 3" class="img-fluid rounded-3" />
+                                </button>
+                                <div class="mt-1 small">Burger 3</div>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-3 text-center">
+                                <button type="button" class="press-button p-0 border-0 bg-transparent"
+                                    style="cursor:pointer;">
+                                    <img src="img/bgr4.jpg" alt="Burger 4" class="img-fluid rounded-3" />
+                                </button>
+                                <div class="mt-1 small">Burger 4</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>    
 
     <section>
         <footer class="footer mt-auto py-3 bg-deep-dark shadow-lg">

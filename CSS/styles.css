@@ -8,6 +8,10 @@ body {
     color: white;
 }
 
+.h2color {
+    color: #ff9100;
+}
+
 .pulse-button {
     background-color: hsl(46, 84%, 48%);
     color: white;

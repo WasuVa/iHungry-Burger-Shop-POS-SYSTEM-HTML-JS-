@@ -18,3 +18,7 @@ const targetUrl = 'oderadd.html';
 button.addEventListener('click', function() {
     window.location.href = targetUrl;
 });
+
+function showAlert() {
+    alert("Item added to order!");
+}

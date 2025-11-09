@@ -5,7 +5,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     backdrop-filter: blur(10px);
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .h2color {

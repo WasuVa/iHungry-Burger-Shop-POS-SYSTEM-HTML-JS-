@@ -67,12 +67,12 @@
         </div>
     </nav>
 
-    <div class="container mt-5 d-flex justify-content-center">
-        <table style="width: 90%; border-radius: 30px;">
-            <tr>
-                <td
-                    style="width: 40%; padding: 20px; border: 100px; border-radius: 10px; background-color: rgba(192, 126, 4, 0.726);">
-                    <h1>Add New Order</h1>
+    <div class="container mt-5">
+        <div class="row g-4 justify-content-center">
+            <!-- Form column -->
+            <div class="col-12 col-lg-5">
+                <div class="p-4 rounded-4" style="background-color: rgba(192, 126, 4, 0.726);">
+                    <h1 class="h4 mb-3">Add New Order</h1>
                     <form style="width: 100%;">
                         <div class="mb-3">
                             <label for="customerName" class="form-label">Customer Name:</label>
@@ -89,77 +89,76 @@
                             <input placeholder="Enter order amount" type="number" id="orderAmount" name="orderAmount"
                                 class="form-control" required>
                         </div>
-                        <button type="submit" class="btn btn-primary">Add Oder</button>
+                        <button type="submit" class="btn btn-primary">Add Order</button>
                     </form>
-                </td>
-                <td
-                    style="padding: 20px; border: 100px; border-radius: 10px; background-color: rgba(192, 126, 4, 0.726); text-align: center;">
-                    <h1>ITEM LIST</h1>
-                    <table style="margin: auto;">
-                        <tr>
-                            <td>
-                                <button class="press-button" style="background-color: rgba(255, 0, 0, 0.3); border: none; padding: 0; cursor: pointer; border-radius: 30px;">
-                                    <img src="img/bgr1.jpg" alt="Burger 1" width="100"
-                                        style="border-radius: 20px; margin: 10px;">
-                                </button>
-                                <h5>Burger 1</h5>
-                            </td>
-                            <td>
-                               <button class="press-button" style="background-color: rgba(255, 0, 0, 0.3); border: none; padding: 0; cursor: pointer; border-radius: 30px;">
-                                    <img src="img/bgr2.jpg" alt="Burger 2" width="100"
-                                        style="border-radius: 20px; margin: 10px;">
-                                </button>
-                                <h5>Burger 2</h5>
-                            </td>
-                            <td>
-                                <button class="press-button" style="background-color: rgba(255, 0, 0, 0.3); border: none; padding: 0; cursor: pointer; border-radius: 30px;">
-                                    <img src="img/bgr3.jpg" alt="Burger 3" width="100"
-                                        style="border-radius: 20px; margin: 10px;">
-                                </button>
-                                <h5>Burger 3</h5>
-                            </td>
-                            <td>
-                                <button class="press-button" style="background-color: rgba(255, 0, 0, 0.3); border: none; padding: 0; cursor: pointer; border-radius: 30px;">
-                                    <img src="img/bgr4.jpg" alt="Burger 4" width="100"
-                                        style="border-radius: 20px; margin: 10px;">
-                                </button>
-                                <h5>Burger 4</h5>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button class="press-button" style="background-color: rgba(255, 0, 0, 0.3); border: none; padding: 0; cursor: pointer; border-radius: 30px;">
-                                    <img src="img/bgr5.jpg" alt="Burger 5" width="100"
-                                        style="border-radius: 20px; margin: 10px;">
-                                </button>
-                                <h5>Burger 5</h5>
-                            </td>
-                            <td>
-                                <button class="press-button" style="background-color: rgba(255, 0, 0, 0.3); border: none; padding: 0; cursor: pointer; border-radius: 30px;">
-                                    <img src="img/bgr6.jpg" alt="Burger 6" width="100"
-                                        style="border-radius: 20px; margin: 10px;">
-                                </button>
-                                <h5>Burger 6</h5>
-                            </td>
-                            <td>
-                                <button class="press-button" style="background-color: rgba(255, 0, 0, 0.3); border: none; padding: 0; cursor: pointer; border-radius: 30px;">
-                                    <img src="img/bgr7.jpg" alt="Burger 7" width="100"
-                                        style="border-radius: 20px; margin: 10px;">
-                                </button>
-                                <h5>Burger 7</h5>
-                            </td>
-                            <td>
-                                <button class="press-button" style="background-color: rgba(255, 0, 0, 0.3); border: none; padding: 0; cursor: pointer; border-radius: 30px;">
-                                    <img src="img/bgr8.jpg" alt="Burger 8" width="100"
-                                        style="border-radius: 20px; margin: 10px;">
-                                </button>
-                                <h5>Burger 8</h5>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
+                </div>
+            </div>
+
+            <!-- Item list column (responsive grid) -->
+            <div class="col-12 col-lg-7">
+                <div class="p-4 rounded-4 text-center" style="background-color: rgba(192, 126, 4, 0.726);">
+                    <h1 class="h4 mb-3">Item List</h1>
+
+                    <div class="row g-3 justify-content-center">
+                        <div class="col-6 col-sm-4 col-md-3 text-center">
+                            <button type="button" class="press-button p-0 border-0 bg-transparent" style="cursor:pointer;">
+                                <img src="img/bgr1.jpg" alt="Burger 1" class="img-fluid rounded-3" />
+                            </button>
+                            <div class="mt-1 small">Burger 1</div>
+                        </div>
+
+                        <div class="col-6 col-sm-4 col-md-3 text-center">
+                            <button type="button" class="press-button p-0 border-0 bg-transparent" style="cursor:pointer;">
+                                <img src="img/bgr2.jpg" alt="Burger 2" class="img-fluid rounded-3" />
+                            </button>
+                            <div class="mt-1 small">Burger 2</div>
+                        </div>
+
+                        <div class="col-6 col-sm-4 col-md-3 text-center">
+                            <button type="button" class="press-button p-0 border-0 bg-transparent" style="cursor:pointer;">
+                                <img src="img/bgr3.jpg" alt="Burger 3" class="img-fluid rounded-3" />
+                            </button>
+                            <div class="mt-1 small">Burger 3</div>
+                        </div>
+
+                        <div class="col-6 col-sm-4 col-md-3 text-center">
+                            <button type="button" class="press-button p-0 border-0 bg-transparent" style="cursor:pointer;">
+                                <img src="img/bgr4.jpg" alt="Burger 4" class="img-fluid rounded-3" />
+                            </button>
+                            <div class="mt-1 small">Burger 4</div>
+                        </div>
+
+                        <div class="col-6 col-sm-4 col-md-3 text-center">
+                            <button type="button" class="press-button p-0 border-0 bg-transparent" style="cursor:pointer;">
+                                <img src="img/bgr5.jpg" alt="Burger 5" class="img-fluid rounded-3" />
+                            </button>
+                            <div class="mt-1 small">Burger 5</div>
+                        </div>
+
+                        <div class="col-6 col-sm-4 col-md-3 text-center">
+                            <button type="button" class="press-button p-0 border-0 bg-transparent" style="cursor:pointer;">
+                                <img src="img/bgr6.jpg" alt="Burger 6" class="img-fluid rounded-3" />
+                            </button>
+                            <div class="mt-1 small">Burger 6</div>
+                        </div>
+
+                        <div class="col-6 col-sm-4 col-md-3 text-center">
+                            <button type="button" class="press-button p-0 border-0 bg-transparent" style="cursor:pointer;">
+                                <img src="img/bgr7.jpg" alt="Burger 7" class="img-fluid rounded-3" />
+                            </button>
+                            <div class="mt-1 small">Burger 7</div>
+                        </div>
+
+                        <div class="col-6 col-sm-4 col-md-3 text-center">
+                            <button type="button" class="press-button p-0 border-0 bg-transparent" style="cursor:pointer;">
+                                <img src="img/bgr8.jpg" alt="Burger 8" class="img-fluid rounded-3" />
+                            </button>
+                            <div class="mt-1 small">Burger 8</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <section>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 shadow-lg">
+        <div class="container-fluid cotainerMY">
+
+            <a class="navbar-brand fw-bold text-warning fs-4" href="index.html">
+                <img src="img/burger.png" alt="iHungry-LOGO" width="150"
+                    style="border: 5px solid rgba(181, 146, 5, 0.831); border-radius: 40px; padding: 10px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#posNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="posNav">
+                <ul class="navbar-nav me-auto gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link active d-flex flex-column align-items-center" href="#">
+                            🧾 <small>Orders</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="menu.html">
+                            🍔 <small>Menu</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="#">
+                            🪑 <small>Dine-In</small>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="takeaway.html">
+                            🛍️ <small>Takeaway</small>
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="kitchen.html">
+                            👨‍🍳 <small>Kitchen</small>
+                        </a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="reports.html">
+                            📊 <small>Reports</small>
+                        </a>
+                    </li>
+                </ul>
+                <div class="d-flex gap-2">
+                    <span class="text-white small">
+                        <i class="bi bi-stopwatch me-1"></i> <span id="uptime"
+                            style="font-size:30px; color: tomato;">00:00:00</span>
+                    </span>
+                    <button class="slide-button" id="HOME" onclick="location.href='index.html'">HOME</button>
+                    <button class="btn btn-outline-light">⚙️</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <footer class="footer mt-auto py-3 bg-deep-dark shadow-lg">
+            <div class="container-fluid cotainerMY">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-3 col-sm-6 text-center text-md-start footer-link-group p-2">
+                        <table>
+                            <tr>
+                                <td>
+                                    <a class="navbar-brand fw-bold text-warning fs-4" href="index.html">
+                                        <img src="img/burger.png" alt="iHungry-LOGO" width="150"
+                                            style="padding-left: 10px; padding-right: 30px;">
+                                    </a>
+                                </td>
+                                <td>
+                                    <span style="font-size: 14px; color: white;">
+                                        iHungry - Burger Shop<br>
+                                        123 Colombo Rd, Colombo<br>
+                                        Phone: (123) 456-7890<br>
+                                        Email: info@ihungry.com <br>
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 text-center footer-link-group p-2">
+                        <p class="mb-1 fw-bold text-uppercase small text-secondary"></p>
+                        <ul class="list-inline m-0">
+                            <li class="list-inline-item"><a href="#"
+                                    class="text-light text-decoration-none transition-hover" title="Open Drawer"><i
+                                        class="bi bi-cash-stack"></i></a></li>
+                            <li class="list-inline-item mx-4"><a href="#"
+                                    class="text-warning text-decoration-none transition-hover" title="Sync Data"><i
+                                        class="bi bi-cloud-arrow-up-fill"></i></a></li>
+                            <li class="list-inline-item"><a href="#"
+                                    class="text-danger text-decoration-none transition-hover"
+                                    title="Emergency Logout"><i class="bi bi-box-arrow-right"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 text-center footer-link-group p-2 mt-2 mt-md-0">
+                        <p class="mb-1 fw-bold text-uppercase small text-secondary"></p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 text-center text-md-end p-2 mt-2 mt-md-0">
+                        <p class="mb-1 fw-bold text-uppercase small text-secondary">System Info</p>
+                        <span class="badge bg-secondary rounded-pill fw-normal">iHungry SYS 1.0V BETA</span>
+                        <small class="text-white-50 d-block mt-1">&copy; 2025 Tech Solutions</small>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script src="Js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

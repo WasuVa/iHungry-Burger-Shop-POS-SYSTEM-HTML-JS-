@@ -6,6 +6,15 @@ body {
     background-attachment: fixed;
     backdrop-filter: blur(10px);
     color: rgb(0, 0, 0);
+    width: 100%;
+}
+
+nav{
+    width: 100%;
+}
+
+.cotainerMY{
+    max-width: 1200px;
 }
 
 .h2color {

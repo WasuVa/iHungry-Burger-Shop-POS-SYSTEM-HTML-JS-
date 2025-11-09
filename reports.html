@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Order</title>
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
     <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -49,18 +50,20 @@
                             👨‍🍳 <small>Kitchen</small>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link d-flex flex-column align-items-center" href="reports.html">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="#">
                             📊 <small>Reports</small>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
+
                 <div class="d-flex gap-2">
                     <span class="text-white small">
                         <i class="bi bi-stopwatch me-1"></i> <span id="uptime"
                             style="font-size:30px; color: tomato;">00:00:00</span>
                     </span>
-                    <button class="slide-button" id="HOME" onclick="location.href='index.html'">HOME</button>
+                    <button class="slide-button" id="newOrderBtn" onclick="location.href='orderadd.html'">+ New
+                        Order</button>
                     <button class="btn btn-outline-light">⚙️</button>
                 </div>
             </div>
@@ -72,7 +75,7 @@
             <div class="row g-4 justify-content-center">
                 <div class="col-12 col-lg-5" style="width: 100%;">
                     <div class="p-4 rounded-4" style="background-color: rgba(192, 126, 4, 0.6); margin-bottom: 20px;">
-                        <h1 class="h4 mb-3">Add New Order</h1>
+                        <h1 class="h4 mb-3">Reports</h1>
                         <form style="width: 100%;">
                             <div class="mb-3">
                                 <label for="customerName" class="form-label">Customer Name:</label>
@@ -80,20 +83,20 @@
                                     name="customerName" required>
                             </div>
                             <div class="mb-3">
-                                <label for="orderDetails" class="form-label">Order Details:</label>
-                                <textarea placeholder="Enter order details" id="orderDetails" name="orderDetails"
-                                    class="form-control" required></textarea>
+                                <label for="orderID" class="form-label">Order ID:</label>
+                                <input placeholder="Enter order ID" type="text" class="form-control" id="orderID"
+                                    name="orderID" required>
                             </div>
                             <div class="mb-3">
-                                <label for="orderAmount" class="form-label">Order Amount:</label>
-                                <input placeholder="Enter order amount" type="number" id="orderAmount" name="orderAmount"
-                                    class="form-control" required>
+                                <label for="report" class="form-label">Report:</label>
+                                <textarea placeholder="Enter report details" id="report" name="report"
+                                    class="form-control" required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Add Order</button>
+                            <button type="submit" class="btn btn-danger">Submit Report</button>
                         </form>
                     </div>
                 </div>
-                <div class="col-12 col-lg-7" style="width: 50%;">
+                <!-- <div class="col-12 col-lg-7" style="width: 50%;">
                     <div class="p-4 rounded-4 text-center" style="background-color: rgba(192, 126, 4, 0.6); height:96.5%;">
                         <h1 class="h4 mb-3">BURGER TYPES</h1>
                         <div class="row g-3 justify-content-center">
@@ -155,8 +158,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-lg-7" style="width: 50%;">
+                </div> -->
+                <!-- <div class="col-12 col-lg-7" style="width: 50%;">
                     <div class="p-4 rounded-4 text-center mb-4" style="background-color: rgba(192, 126, 4, 0.6); ">
                         <h1 class="h4 mb-3">FRIES TYPES</h1>
                         <div class="row g-3 justify-content-center">
@@ -223,10 +226,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
-    </section>    
+    </section>
 
     <section>
         <footer class="footer mt-auto py-3 bg-deep-dark shadow-lg">
@@ -281,7 +284,7 @@
     </section>
 
     <script src="Js/app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

@@ -13,7 +13,6 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 shadow-lg">
         <div class="container-fluid cotainerMY">
-
             <a class="navbar-brand fw-bold text-warning fs-4" href="index.html">
                 <img src="img/burger.png" alt="iHungry-LOGO" width="150"
                     style="border: 5px solid rgba(181, 146, 5, 0.831); border-radius: 40px; padding: 10px;">
@@ -30,21 +29,11 @@
                             🏠 <small>Home</small>
                         </a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link active d-flex flex-column align-items-center" href="#">
-                            🧾 <small>Orders</small>
-                        </a>
-                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link d-flex flex-column align-items-center" href="menu.html">
                             🍔 <small>Menu</small>
                         </a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link d-flex flex-column align-items-center" href="#">
-                            🪑 <small>Dine-In</small>
-                        </a>
-                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link d-flex flex-column align-items-center" href="takeaway.html">
                             🛍️ <small>Takeaway</small>
@@ -62,10 +51,6 @@
                     </li>
                 </ul>
                 <div class="d-flex gap-2">
-                    <!-- <span class="text-white small">
-                        <i class="bi bi-stopwatch me-1"></i> <span id="uptime"
-                            style="font-size:30px; color: tomato;">00:00:00</span>
-                    </span> -->
                     <button class="slide-button" id="HOME" onclick="location.href='index.html'">HOME</button>
                     <button class="btn btn-outline-light">⚙️</button>
                 </div>
@@ -83,89 +68,121 @@
                 <div class="row g-4 justify-content-center">
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
                         <div class="card flex-fill h-100">
-                            <img src="img/IMG-tables/8.jpg" class="card-img-top img-fluid" alt="Classic Cheeseburger">
+                            <img src="img/IMG-tables/8.jpg" class="card-img-top img-fluid" alt="Priority Pass">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title"><b>The Priority Pass</b></h5>
                                 <p class="card-text">Guarantee your spot in our most comfortable booth, skip the wait,
                                     and dive straight into the good stuff.</p>
-                                <!-- <button class="btn btn-warning mt-auto align-self-start" onclick="showAlert()">View</button> -->
+                                <button class="btn btn-warning mt-auto align-self-start book-table-btn" 
+                                    data-table="Priority Pass" 
+                                    data-capacity="2-4"
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#bookingModal">Book Now</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
                         <div class="card flex-fill h-100">
-                            <img src="img/IMG-tables/7.jpg" class="card-img-top img-fluid" alt="Breakfast Burger">
+                            <img src="img/IMG-tables/7.jpg" class="card-img-top img-fluid" alt="Epic Feast Bundle">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title"><b>The Epic Feast Bundle(8+Guests)</b></h5>
+                                <h5 class="card-title"><b>The Epic Feast Bundle</b></h5>
                                 <p class="card-text">Perfect for large groups! Reserve our communal table for a
                                     hassle-free celebration or gathering.</p>
-                                <!-- <button class="btn btn-warning mt-auto align-self-start">View</button> -->
+                                <button class="btn btn-warning mt-auto align-self-start book-table-btn" 
+                                    data-table="Epic Feast Bundle" 
+                                    data-capacity="8+"
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#bookingModal">Book Now</button>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
                         <div class="card flex-fill h-100">
-                            <img src="img/IMG-tables/6.jpg" class="card-img-top img-fluid" alt="California Burger">
+                            <img src="img/IMG-tables/6.jpg" class="card-img-top img-fluid" alt="Date Night">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title"><b>Diner Date Night</b></h5>
                                 <p class="card-text">An intimate two-person booking with candlelight and a curated
                                     burger and beverage menu for a perfect evening. </p>
-                                <!-- <button class="btn btn-warning mt-auto align-self-start">View</button> -->
+                                <button class="btn btn-warning mt-auto align-self-start book-table-btn" 
+                                    data-table="Date Night" 
+                                    data-capacity="2"
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#bookingModal">Book Now</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
                         <div class="card flex-fill h-100">
-                            <img src="img/IMG-tables/5.jpg" class="card-img-top img-fluid" alt="Caramelized Onion Burger">
+                            <img src="img/IMG-tables/5.jpg" class="card-img-top img-fluid" alt="Birthday Bash">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title"><b>The Birthday Burger Bash</b></h5>
                                 <p class="card-text">Let us handle the details! A reserved celebratory table, decorated
                                     with balloons and ready for your party.</p>
-                                <!-- <button class="btn btn-warning mt-auto align-self-start">View</button> -->
+                                <button class="btn btn-warning mt-auto align-self-start book-table-btn" 
+                                    data-table="Birthday Bash" 
+                                    data-capacity="6-10"
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#bookingModal">Book Now</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
                         <div class="card flex-fill h-100">
-                            <img src="img/IMG-tables/4.jpg" class="card-img-top img-fluid" alt="Spicy Jalapeño Burger">
+                            <img src="img/IMG-tables/4.jpg" class="card-img-top img-fluid" alt="Family Meal">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title"><b>The All-Star Family Meal</b></h5>
                                 <p class="card-text">A spacious, comfortable table reservation for the whole family to
                                     enjoy our legendary burgers and milkshakes.</p>
-                                <!-- <button class="btn btn-warning mt-auto align-self-start">View</button> -->
+                                <button class="btn btn-warning mt-auto align-self-start book-table-btn" 
+                                    data-table="Family Meal" 
+                                    data-capacity="4-6"
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#bookingModal">Book Now</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
                         <div class="card flex-fill h-100">
-                            <img src="img/IMG-tables/1.jpg" class="card-img-top img-fluid" alt="Bacon BBQ Burger">
+                            <img src="img/IMG-tables/1.jpg" class="card-img-top img-fluid" alt="Crew Catch-Up">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title"><b>The Crew Catch-Up</b></h5>
                                 <p class="card-text">A fun, lively reservation for friends to reconnect over great food,
                                     good drinks, and guaranteed seating.</p>
-                                <!-- <button class="btn btn-warning mt-auto align-self-start">View</button> -->
+                                <button class="btn btn-warning mt-auto align-self-start book-table-btn" 
+                                    data-table="Crew Catch-Up" 
+                                    data-capacity="4-8"
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#bookingModal">Book Now</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
                         <div class="card flex-fill h-100">
-                            <img src="img/IMG-tables/3.jpg" class="card-img-top img-fluid" alt="Mushroom Swiss Burger">
+                            <img src="img/IMG-tables/3.jpg" class="card-img-top img-fluid" alt="Power Lunch">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title"><b>The Executive Power Lunch</b></h5>
                                 <p class="card-text">Secure a professional, reserved setting perfect for client
                                     meetings, team lunch, or quick, quality business dining.</p>
-                                <!-- <button class="btn btn-warning mt-auto align-self-start">View</button> -->
+                                <button class="btn btn-warning mt-auto align-self-start book-table-btn" 
+                                    data-table="Power Lunch" 
+                                    data-capacity="2-4"
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#bookingModal">Book Now</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
                         <div class="card flex-fill h-100">
-                            <img src="img/IMG-tables/2.jpg" class="card-img-top img-fluid" alt="Kimchi Burger">
+                            <img src="img/IMG-tables/2.jpg" class="card-img-top img-fluid" alt="VIP Vault">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title"><b>The VIP Vault</b></h5>
                                 <p class="card-text">Exclusive private dining area reservation for elevated privacy and conversation away from the main dining floor.</p>
-                                <!-- <button class="btn btn-warning mt-auto align-self-start">View</button> -->
+                                <button class="btn btn-warning mt-auto align-self-start book-table-btn" 
+                                    data-table="VIP Vault" 
+                                    data-capacity="2-6"
+                                    data-bs-toggle="modal" 
+                                    data-bs-target="#bookingModal">Book Now</button>
                             </div>
                         </div>
                     </div>
@@ -173,6 +190,77 @@
             </div>
         </section>
     </section>
+
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content" style="background: linear-gradient(135deg, rgba(192, 126, 4, 0.95) 0%, rgba(255, 153, 0, 0.9) 100%); border: 3px solid #f0ad4e; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); max-height: 90vh;">
+                <div class="modal-header border-bottom-0 pb-0" style="position: sticky; top: 0; z-index: 1; background: linear-gradient(135deg, rgba(192, 126, 4, 0.95) 0%, rgba(255, 153, 0, 0.9) 100%); border-radius: 20px 20px 0 0;">
+                    <div class="w-100">
+                        <h3 class="modal-title text-white fw-bold text-center mb-2" id="bookingModalLabel">
+                            <span id="modalTableName">Reserve Your Table</span>
+                        </h3>
+                        <p class="text-white-50 text-center mb-0 small">Fill in the details below to complete your reservation</p>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white position-absolute" style="right: 15px; top: 15px;" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-4 py-3" style="overflow-y: auto; max-height: calc(90vh - 200px);">
+                    <form id="bookingForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="customerName" placeholder="Full Name" required style="background-color: rgba(255,255,255,0.9); border: 2px solid #f0ad4e;">
+                                    <label for="customerName"><i class="bi bi-person-fill"></i> Full Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="customerPhone" placeholder="Phone Number" required style="background-color: rgba(255,255,255,0.9); border: 2px solid #f0ad4e;">
+                                    <label for="customerPhone"><i class="bi bi-telephone-fill"></i> Phone Number</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="date" class="form-control" id="bookingDate" placeholder="Date" required style="background-color: rgba(255,255,255,0.9); border: 2px solid #f0ad4e;">
+                                    <label for="bookingDate"><i class="bi bi-calendar-event-fill"></i> Reservation Date</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="time" class="form-control" id="bookingTime" placeholder="Time" required style="background-color: rgba(255,255,255,0.9); border: 2px solid #f0ad4e;">
+                                    <label for="bookingTime"><i class="bi bi-clock-fill"></i> Time</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="guestCount" min="1" max="20" placeholder="Guests" required style="background-color: rgba(255,255,255,0.9); border: 2px solid #f0ad4e;">
+                                    <label for="guestCount"><i class="bi bi-people-fill"></i> Number of Guests</label>
+                                </div>
+                                <div class="mt-2 p-2 rounded" style="background-color: rgba(255,255,255,0.2);">
+                                    <small class="text-white"><i class="bi bi-info-circle-fill"></i> <strong>Table Capacity:</strong> <span id="tableCapacity" class="fw-bold">-</span></small>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="specialRequests" placeholder="Special Requests" style="height: 100px; background-color: rgba(255,255,255,0.9); border: 2px solid #f0ad4e;"></textarea>
+                                    <label for="specialRequests"><i class="bi bi-chat-dots-fill"></i> Special Requests (Optional)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer border-top-0 pt-0 pb-4 px-4" style="position: sticky; bottom: 0; z-index: 1; background: linear-gradient(135deg, rgba(192, 126, 4, 0.95) 0%, rgba(255, 153, 0, 0.9) 100%); border-radius: 0 0 20px 20px;">
+                    <div class="w-100 d-flex gap-2">
+                        <button type="button" class="btn btn-lg flex-fill" data-bs-dismiss="modal" style="background-color: rgba(108, 117, 125, 0.8); color: white; border: none; border-radius: 10px; font-weight: bold;">
+                            <i class="bi bi-x-circle"></i> Cancel
+                        </button>
+                        <button type="button" class="btn btn-lg flex-fill" id="confirmBookingBtn" style="background-color: #28a745; color: white; border: none; border-radius: 10px; font-weight: bold; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);">
+                            <i class="bi bi-check-circle-fill"></i> Confirm Booking
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section>
         <footer class="footer mt-auto py-3 bg-deep-dark shadow-lg">
@@ -197,7 +285,6 @@
                                 </td>
                             </tr>
                         </table>
-
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 text-center footer-link-group p-2">
                         <p class="mb-1 fw-bold text-uppercase small text-secondary"></p>

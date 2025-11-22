@@ -25,11 +25,6 @@
 
             <div class="collapse navbar-collapse" id="posNav">
                 <ul class="navbar-nav me-auto gap-2">
-                    <li class="nav-item">
-                        <a class="nav-link active d-flex flex-column align-items-center" href="index.html">
-                            🏠 <small>Home</small>
-                        </a>
-                    </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link active d-flex flex-column align-items-center" href="#">
                             🧾 <small>Orders</small>
@@ -75,166 +70,107 @@
         </div>
     </nav>
 
-    <section>   
-        <div class="container mt-5 cotainerMY">
-            <div class="row g-4 justify-content-center">
-                <div class="col-12 col-lg-5" style="width: 100%;">
-                    <div class="p-4 rounded-4" style="background-color: rgba(192, 126, 4, 0.6); margin-bottom: 20px;">
-                        <h1 class="h4 mb-3">Reports</h1>
-                        <form style="width: 100%;">
-                            <div class="mb-3">
-                                <label for="customerName" class="form-label">Customer Name:</label>
-                                <input placeholder="Enter customer name" type="text" class="form-control" id="customerName"
-                                    name="customerName" required>
+    <main class="bg-body-tertiary py-5">
+        <div class="container cotainerMY">
+            <div class="mb-4">
+                <h1 class="h3 mb-1">Reports & Feedback</h1>
+                <p class="text-muted mb-0">Log customer issues, track resolutions, and maintain service quality.</p>
+            </div>
+
+            <div class="row g-3 mb-4">
+                <div class="col-sm-4">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="fs-1">📋</div>
+                                <div>
+                                    <p class="text-uppercase text-muted small mb-1">Total Reports</p>
+                                    <h2 class="h3 mb-0" data-summary="total">00</h2>
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="orderID" class="form-label">Order ID:</label>
-                                <input placeholder="Enter order ID" type="text" class="form-control" id="orderID"
-                                    name="orderID" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="report" class="form-label">Report:</label>
-                                <textarea placeholder="Enter report details" id="report" name="report"
-                                    class="form-control" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-danger">Submit Report</button>
-                        </form>
+                        </div>
                     </div>
                 </div>
-                <!-- <div class="col-12 col-lg-7" style="width: 50%;">
-                    <div class="p-4 rounded-4 text-center" style="background-color: rgba(192, 126, 4, 0.6); height:96.5%;">
-                        <h1 class="h4 mb-3">BURGER TYPES</h1>
-                        <div class="row g-3 justify-content-center">
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/bgr1.jpg" alt="Burger 1" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Burger 1</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/bgr2.jpg" alt="Burger 2" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Burger 2</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/bgr3.jpg" alt="Burger 3" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Burger 3</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/bgr4.jpg" alt="Burger 4" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Burger 4</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/bgr5.jpg" alt="Burger 5" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Burger 5</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/bgr6.jpg" alt="Burger 6" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Burger 6</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/bgr7.jpg" alt="Burger 7" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Burger 7</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/bgr8.jpg" alt="Burger 8" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Burger 8</div>
+                <div class="col-sm-4">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="fs-1">✅</div>
+                                <div>
+                                    <p class="text-uppercase text-muted small mb-1">Resolved</p>
+                                    <h2 class="h3 mb-0 text-success" data-summary="resolved">00</h2>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div> -->
-                <!-- <div class="col-12 col-lg-7" style="width: 50%;">
-                    <div class="p-4 rounded-4 text-center mb-4" style="background-color: rgba(192, 126, 4, 0.6); ">
-                        <h1 class="h4 mb-3">FRIES TYPES</h1>
-                        <div class="row g-3 justify-content-center">
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/IMG-chips/chip1.jpg" alt="Fries 1" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Fries 1</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/IMG-chips/chip2.jpg" alt="Fries 2" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Fries 2</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/IMG-chips/chip3.jpg" alt="Fries 3" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Fries 3</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/IMG-chips/chip4.jpg" alt="Fries 4" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Fries 4</div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="fs-1">⏳</div>
+                                <div>
+                                    <p class="text-uppercase text-muted small mb-1">Pending</p>
+                                    <h2 class="h3 mb-0 text-warning" data-summary="pending">00</h2>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="p-4 rounded-4 text-center" style="background-color: rgba(192, 126, 4, 0.6); margin-bottom: 20px;">
-                        <h1 class="h4 mb-3">BEVERAGES TYPES</h1>
-                        <div class="row g-3 justify-content-center">
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/IMG-bev/bev1.jpg" alt="Beverage 1" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Beverage 1</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/IMG-bev/bev2.jpg" alt="Beverage 2" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Beverage 2</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/IMG-bev/bev3.jpg" alt="Beverage 3" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Beverage 3</div>
-                            </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/IMG-bev/bev4.jpg" alt="Beverage 4" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Beverage 4</div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-header bg-white border-0 pb-0">
+                            <h2 class="h5 mb-0">Submit New Report</h2>
+                        </div>
+                        <div class="card-body">
+                            <form id="reportForm">
+                                <div class="mb-3">
+                                    <label for="customerName" class="form-label fw-semibold">Customer Name</label>
+                                    <input placeholder="Enter customer name" type="text" class="form-control" 
+                                           id="customerName" name="customerName" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="orderID" class="form-label fw-semibold">Order ID</label>
+                                    <input placeholder="e.g., #1024" type="text" class="form-control" 
+                                           id="orderID" name="orderID" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="report" class="form-label fw-semibold">Issue Details</label>
+                                    <textarea placeholder="Describe the issue or feedback in detail..." 
+                                              id="report" name="report" class="form-control" rows="4" required></textarea>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-warning text-dark fw-semibold">
+                                        📝 Submit Report
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="card shadow-sm border-0 h-100">
+                        <div class="card-header bg-white border-0 pb-0 d-flex justify-content-between align-items-center">
+                            <h2 class="h5 mb-0">Recent Reports</h2>
+                            <button class="btn btn-sm btn-outline-secondary" onclick="location.reload()">
+                                🔄 Refresh
+                            </button>
+                        </div>
+                        <div class="card-body" id="reportsList" style="max-height: 500px; overflow-y: auto;">
+                            <div class="text-center text-muted py-5">
+                                <div class="fs-1 mb-3">📭</div>
+                                <p class="mb-0">No reports logged yet.<br>Use the form to add your first entry.</p>
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
-    </section>
+    </main>
 
     <section>
         <footer class="footer mt-auto py-3 bg-deep-dark shadow-lg">

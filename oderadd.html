@@ -7,29 +7,20 @@
     <title>Add Order</title>
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 shadow-lg">
         <div class="container-fluid cotainerMY">
-
             <a class="navbar-brand fw-bold text-warning fs-4" href="index.html">
                 <img src="img/burger.png" alt="iHungry-LOGO" width="150"
                     style="border: 5px solid rgba(181, 146, 5, 0.831); border-radius: 40px; padding: 10px;">
             </a>
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#posNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="posNav">
                 <ul class="navbar-nav me-auto gap-2">
-                    <li class="nav-item">
-                        <a class="nav-link active d-flex flex-column align-items-center" href="#">
-                            🧾 <small>Orders</small>
-                        </a>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link d-flex flex-column align-items-center" href="menu.html">
                             🍔 <small>Menu</small>
@@ -67,167 +58,229 @@
             </div>
         </div>
     </nav>
-
     <section>
         <div class="container mt-5 cotainerMY">
-            <div class="row g-4 justify-content-center">
-                <div class="col-12 col-lg-5" style="width: 100%;">
-                    <div class="p-4 rounded-4" style="background-color: rgba(192, 126, 4, 0.6); margin-bottom: 20px;">
-                        <h1 class="h4 mb-3">Add New Order</h1>
-                        <form style="width: 100%;">
+            <div class="row g-4">
+                <div class="col-12 col-lg-4">
+                    <div class="p-4 rounded-4 mb-4" style="background-color: rgba(192, 126, 4, 0.6);">
+                        <h1 class="h4 mb-3 text-white">New Order</h1>
+                        <form id="orderForm">
                             <div class="mb-3">
-                                <label for="customerName" class="form-label">Customer Name:</label>
-                                <input placeholder="Enter customer name" type="text" class="form-control" id="customerName"
-                                    name="customerName" required>
+                                <label for="customerName" class="form-label text-white fw-bold">Customer Name</label>
+                                <input placeholder="Enter customer name" type="text" class="form-control" id="customerName" name="customerName" required>
                             </div>
                             <div class="mb-3">
-                                <label for="orderDetails" class="form-label">Order Details:</label>
-                                <textarea placeholder="Enter order details" id="orderDetails" name="orderDetails"
-                                    class="form-control" required></textarea>
+                                <label for="tableNumber" class="form-label text-white fw-bold">Table Number</label>
+                                <input placeholder="Enter table number" type="text" class="form-control" id="tableNumber" name="tableNumber">
                             </div>
                             <div class="mb-3">
-                                <label for="orderAmount" class="form-label">Order Amount:</label>
-                                <input placeholder="Enter order amount" type="number" id="orderAmount" name="orderAmount"
-                                    class="form-control" required>
+                                <label for="orderNotes" class="form-label text-white fw-bold">Special Notes</label>
+                                <textarea placeholder="Any special requests..." id="orderNotes" name="orderNotes" class="form-control" rows="2"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Add Order</button>
                         </form>
                     </div>
+                    <div class="p-4 rounded-4" style="background-color: rgba(192, 126, 4, 0.6);">
+                        <h2 class="h5 mb-3 text-white">Order Cart</h2>
+                        <div id="cartItems" class="mb-3" style="max-height: 300px; overflow-y: auto;">
+                            <p class="text-white-50 text-center py-4">Cart is empty</p>
+                        </div>
+                        <hr class="text-white">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="text-white fw-bold">Subtotal:</span>
+                            <span class="text-white fw-bold" id="subtotal">Rs. 0.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="text-white fw-bold fs-5">Total:</span>
+                            <span class="text-white fw-bold fs-5" id="total">Rs. 0.00</span>
+                        </div>
+                        <button type="button" class="btn btn-success w-100 mb-2" id="placeOrderBtn">
+                            <i class="bi bi-check-circle"></i> Place Order
+                        </button>
+                        <button type="button" class="btn btn-danger w-100" id="clearCartBtn">
+                            <i class="bi bi-trash"></i> Clear Cart
+                        </button>
+                    </div>
                 </div>
-                <div class="col-12 col-lg-7" style="width: 50%;">
-                    <div class="p-4 rounded-4 text-center" style="background-color: rgba(192, 126, 4, 0.6); height:96.5%;">
-                        <h1 class="h4 mb-3">BURGER TYPES</h1>
-                        <div class="row g-3 justify-content-center">
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/bgr1.jpg" alt="Burger 1" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Burger 1</div>
+                <div class="col-12 col-lg-8">
+                    <div class="p-4 rounded-4 mb-4" style="background-color: rgba(192, 126, 4, 0.6);">
+                        <h2 class="h5 mb-3 text-white text-center">BURGERS</h2>
+                        <div class="row g-2">
+                            <div class="col-3">
+                                <div class="card h-100 menu-item" data-name="Classic Cheeseburger" data-price="850" data-category="burger">
+                                    <img src="img/bgr1.jpg" class="card-img-top" alt="Burger 1" style="height: 60px; object-fit: cover;">
+                                    <div class="card-body p-1 text-center" style="padding: 0.25rem !important;">
+                                        <h6 class="card-title mb-0" style="font-size: 0.6rem;">Classic Cheeseburger</h6>
+                                        <p class="card-text text-success fw-bold mb-1" style="font-size: 0.65rem;">Rs. 850</p>
+                                        <button class="btn btn-warning btn-sm w-100 add-to-cart" style="font-size: 0.6rem; padding: 0.15rem;">Add</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/bgr2.jpg" alt="Burger 2" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Burger 2</div>
+                            <div class="col-3">
+                                <div class="card h-100 menu-item" data-name="BBQ Bacon Burger" data-price="950" data-category="burger">
+                                    <img src="img/bgr2.jpg" class="card-img-top" alt="Burger 2" style="height: 60px; object-fit: cover;">
+                                    <div class="card-body p-1 text-center" style="padding: 0.25rem !important;">
+                                        <h6 class="card-title mb-0" style="font-size: 0.6rem;">Breakfast Burger</h6>
+                                        <p class="card-text text-success fw-bold mb-1" style="font-size: 0.65rem;">Rs. 950</p>
+                                        <button class="btn btn-warning btn-sm w-100 add-to-cart" style="font-size: 0.6rem; padding: 0.15rem;">Add</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/bgr3.jpg" alt="Burger 3" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Burger 3</div>
+                            <div class="col-3">
+                                <div class="card h-100 menu-item" data-name="Mushroom Swiss" data-price="900" data-category="burger">
+                                    <img src="img/bgr3.jpg" class="card-img-top" alt="Burger 3" style="height: 60px; object-fit: cover;">
+                                    <div class="card-body p-1 text-center" style="padding: 0.25rem !important;">
+                                        <h6 class="card-title mb-0" style="font-size: 0.6rem;">California Burger</h6>
+                                        <p class="card-text text-success fw-bold mb-1" style="font-size: 0.65rem;">Rs. 900</p>
+                                        <button class="btn btn-warning btn-sm w-100 add-to-cart" style="font-size: 0.6rem; padding: 0.15rem;">Add</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/bgr4.jpg" alt="Burger 4" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Burger 4</div>
+                            <div class="col-3">
+                                <div class="card h-100 menu-item" data-name="Spicy Jalapeño" data-price="920" data-category="burger">
+                                    <img src="img/bgr4.jpg" class="card-img-top" alt="Burger 4" style="height: 60px; object-fit: cover;">
+                                    <div class="card-body p-1 text-center" style="padding: 0.25rem !important;">
+                                        <h6 class="card-title mb-0" style="font-size: 0.6rem;">Caramelized Onion Burger</h6>
+                                        <p class="card-text text-success fw-bold mb-1" style="font-size: 0.65rem;">Rs. 920</p>
+                                        <button class="btn btn-warning btn-sm w-100 add-to-cart" style="font-size: 0.6rem; padding: 0.15rem;">Add</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/bgr5.jpg" alt="Burger 5" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Burger 5</div>
+                            <div class="col-3">
+                                <div class="card h-100 menu-item" data-name="Double Patty" data-price="1100" data-category="burger">
+                                    <img src="img/bgr5.jpg" class="card-img-top" alt="Burger 5" style="height: 60px; object-fit: cover;">
+                                    <div class="card-body p-1 text-center" style="padding: 0.25rem !important;">
+                                        <h6 class="card-title mb-0" style="font-size: 0.6rem;">Spicy Jalapeño Burger</h6>
+                                        <p class="card-text text-success fw-bold mb-1" style="font-size: 0.65rem;">Rs. 1100</p>
+                                        <button class="btn btn-warning btn-sm w-100 add-to-cart" style="font-size: 0.6rem; padding: 0.15rem;">Add</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/bgr6.jpg" alt="Burger 6" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Burger 6</div>
+                            <div class="col-3">
+                                <div class="card h-100 menu-item" data-name="Veggie Burger" data-price="750" data-category="burger">
+                                    <img src="img/bgr6.jpg" class="card-img-top" alt="Burger 6" style="height: 60px; object-fit: cover;">
+                                    <div class="card-body p-1 text-center" style="padding: 0.25rem !important;">
+                                        <h6 class="card-title mb-0" style="font-size: 0.6rem;">Mushroom Swiss Burger</h6>
+                                        <p class="card-text text-success fw-bold mb-1" style="font-size: 0.65rem;">Rs. 750</p>
+                                        <button class="btn btn-warning btn-sm w-100 add-to-cart" style="font-size: 0.6rem; padding: 0.15rem;">Add</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/bgr7.jpg" alt="Burger 7" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Burger 7</div>
+                            <div class="col-3">
+                                <div class="card h-100 menu-item" data-name="Chicken Burger" data-price="880" data-category="burger">
+                                    <img src="img/bgr7.jpg" class="card-img-top" alt="Burger 7" style="height: 60px; object-fit: cover;">
+                                    <div class="card-body p-1 text-center" style="padding: 0.25rem !important;">
+                                        <h6 class="card-title mb-0" style="font-size: 0.6rem;">Bacon BBQ Burger</h6>
+                                        <p class="card-text text-success fw-bold mb-1" style="font-size: 0.65rem;">Rs. 880</p>
+                                        <button class="btn btn-warning btn-sm w-100 add-to-cart" style="font-size: 0.6rem; padding: 0.15rem;">Add</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/bgr8.jpg" alt="Burger 8" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Burger 8</div>
+                            <div class="col-3">
+                                <div class="card h-100 menu-item" data-name="Fish Burger" data-price="820" data-category="burger">
+                                    <img src="img/bgr8.jpg" class="card-img-top" alt="Burger 8" style="height: 60px; object-fit: cover;">
+                                    <div class="card-body p-1 text-center" style="padding: 0.25rem !important;">
+                                        <h6 class="card-title mb-0" style="font-size: 0.6rem;">Kimchi Burger</h6>
+                                        <p class="card-text text-success fw-bold mb-1" style="font-size: 0.65rem;">Rs. 820</p>
+                                        <button class="btn btn-warning btn-sm w-100 add-to-cart" style="font-size: 0.6rem; padding: 0.15rem;">Add</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-lg-7" style="width: 50%;">
-                    <div class="p-4 rounded-4 text-center mb-4" style="background-color: rgba(192, 126, 4, 0.6); ">
-                        <h1 class="h4 mb-3">FRIES TYPES</h1>
-                        <div class="row g-3 justify-content-center">
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/IMG-chips/chip1.jpg" alt="Fries 1" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Fries 1</div>
+                    <div class="p-4 rounded-4 mb-4" style="background-color: rgba(192, 126, 4, 0.6);">
+                        <h2 class="h5 mb-3 text-white text-center">FRIES</h2>
+                        <div class="row g-2">
+                            <div class="col-3">
+                                <div class="card h-100 menu-item" data-name="Regular Fries" data-price="250" data-category="fries">
+                                    <img src="img/IMG-chips/chip1.jpg" class="card-img-top" alt="Fries 1" style="height: 60px; object-fit: cover;">
+                                    <div class="card-body p-1 text-center" style="padding: 0.25rem !important;">
+                                        <h6 class="card-title mb-0" style="font-size: 0.6rem;">Classic Crinkle-Cut Fries</h6>
+                                        <p class="card-text text-success fw-bold mb-1" style="font-size: 0.65rem;">Rs. 250</p>
+                                        <button class="btn btn-warning btn-sm w-100 add-to-cart" style="font-size: 0.6rem; padding: 0.15rem;">Add</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/IMG-chips/chip2.jpg" alt="Fries 2" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Fries 2</div>
+                            <div class="col-3">
+                                <div class="card h-100 menu-item" data-name="Cheese Fries" data-price="350" data-category="fries">
+                                    <img src="img/IMG-chips/chip2.jpg" class="card-img-top" alt="Fries 2" style="height: 60px; object-fit: cover;">
+                                    <div class="card-body p-1 text-center" style="padding: 0.25rem !important;">
+                                        <h6 class="card-title mb-0" style="font-size: 0.6rem;">Sweet Potato Fries</h6>
+                                        <p class="card-text text-success fw-bold mb-1" style="font-size: 0.65rem;">Rs. 350</p>
+                                        <button class="btn btn-warning btn-sm w-100 add-to-cart" style="font-size: 0.6rem; padding: 0.15rem;">Add</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/IMG-chips/chip3.jpg" alt="Fries 3" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Fries 3</div>
+                            <div class="col-3">
+                                <div class="card h-100 menu-item" data-name="Loaded Fries" data-price="450" data-category="fries">
+                                    <img src="img/IMG-chips/chip3.jpg" class="card-img-top" alt="Fries 3" style="height: 60px; object-fit: cover;">
+                                    <div class="card-body p-1 text-center" style="padding: 0.25rem !important;">
+                                        <h6 class="card-title mb-0" style="font-size: 0.6rem;">kettle-cooked potato chips</h6>
+                                        <p class="card-text text-success fw-bold mb-1" style="font-size: 0.65rem;">Rs. 450</p>
+                                        <button class="btn btn-warning btn-sm w-100 add-to-cart" style="font-size: 0.6rem; padding: 0.15rem;">Add</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/IMG-chips/chip4.jpg" alt="Fries 4" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Fries 4</div>
+                            <div class="col-3">
+                                <div class="card h-100 menu-item" data-name="Curly Fries" data-price="300" data-category="fries">
+                                    <img src="img/IMG-chips/chip4.jpg" class="card-img-top" alt="Fries 4" style="height: 60px; object-fit: cover;">
+                                    <div class="card-body p-1 text-center" style="padding: 0.25rem !important;">
+                                        <h6 class="card-title mb-0" style="font-size: 0.6rem;">golden-brown onion rings</h6>
+                                        <p class="card-text text-success fw-bold mb-1" style="font-size: 0.65rem;">Rs. 300</p>
+                                        <button class="btn btn-warning btn-sm w-100 add-to-cart" style="font-size: 0.6rem; padding: 0.15rem;">Add</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="p-4 rounded-4 text-center" style="background-color: rgba(192, 126, 4, 0.6); margin-bottom: 20px;">
-                        <h1 class="h4 mb-3">BEVERAGES TYPES</h1>
-                        <div class="row g-3 justify-content-center">
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/IMG-bev/bev1.jpg" alt="Beverage 1" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Beverage 1</div>
+                    <div class="p-4 rounded-4 mb-4" style="background-color: rgba(192, 126, 4, 0.6);">
+                        <h2 class="h5 mb-3 text-white text-center">BEVERAGES</h2>
+                        <div class="row g-2">
+                            <div class="col-3">
+                                <div class="card h-100 menu-item" data-name="Coca Cola" data-price="150" data-category="beverage">
+                                    <img src="img/IMG-bev/bev1.jpg" class="card-img-top" alt="Beverage 1" style="height: 60px; object-fit: cover;">
+                                    <div class="card-body p-1 text-center" style="padding: 0.25rem !important;">
+                                        <h6 class="card-title mb-0" style="font-size: 0.6rem;">Coca Cola</h6>
+                                        <p class="card-text text-success fw-bold mb-1" style="font-size: 0.65rem;">Rs. 150</p>
+                                        <button class="btn btn-warning btn-sm w-100 add-to-cart" style="font-size: 0.6rem; padding: 0.15rem;">Add</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/IMG-bev/bev2.jpg" alt="Beverage 2" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Beverage 2</div>
+                            <div class="col-3">
+                                <div class="card h-100 menu-item" data-name="Sprite" data-price="150" data-category="beverage">
+                                    <img src="img/IMG-bev/bev2.jpg" class="card-img-top" alt="Beverage 2" style="height: 60px; object-fit: cover;">
+                                    <div class="card-body p-1 text-center" style="padding: 0.25rem !important;">
+                                        <h6 class="card-title mb-0" style="font-size: 0.6rem;">Cold, Crisp Beer</h6>
+                                        <p class="card-text text-success fw-bold mb-1" style="font-size: 0.65rem;">Rs. 150</p>
+                                        <button class="btn btn-warning btn-sm w-100 add-to-cart" style="font-size: 0.6rem; padding: 0.15rem;">Add</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/IMG-bev/bev3.jpg" alt="Beverage 3" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Beverage 3</div>
+                            <div class="col-3">
+                                <div class="card h-100 menu-item" data-name="Orange Juice" data-price="200" data-category="beverage">
+                                    <img src="img/IMG-bev/bev3.jpg" class="card-img-top" alt="Beverage 3" style="height: 60px; object-fit: cover;">
+                                    <div class="card-body p-1 text-center" style="padding: 0.25rem !important;">
+                                        <h6 class="card-title mb-0" style="font-size: 0.6rem;">Milk Shake</h6>
+                                        <p class="card-text text-success fw-bold mb-1" style="font-size: 0.65rem;">Rs. 200</p>
+                                        <button class="btn btn-warning btn-sm w-100 add-to-cart" style="font-size: 0.6rem; padding: 0.15rem;">Add</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 text-center">
-                                <button type="button" class="press-button p-0 border-0 bg-transparent"
-                                    style="cursor:pointer;">
-                                    <img src="img/IMG-bev/bev4.jpg" alt="Beverage 4" class="img-fluid rounded-3" />
-                                </button>
-                                <div class="mt-1 small">Beverage 4</div>
+                            <div class="col-3">
+                                <div class="card h-100 menu-item" data-name="Iced Tea" data-price="180" data-category="beverage">
+                                    <img src="img/IMG-bev/bev4.jpg" class="card-img-top" alt="Beverage 4" style="height: 60px; object-fit: cover;">
+                                    <div class="card-body p-1 text-center" style="padding: 0.25rem !important;">
+                                        <h6 class="card-title mb-0" style="font-size: 0.6rem;">Iced Tea</h6>
+                                        <p class="card-text text-success fw-bold mb-1" style="font-size: 0.65rem;">Rs. 180</p>
+                                        <button class="btn btn-warning btn-sm w-100 add-to-cart" style="font-size: 0.6rem; padding: 0.15rem;">Add</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>    
+    </section>
 
     <section>
         <footer class="footer mt-auto py-3 bg-deep-dark shadow-lg">
@@ -252,7 +305,6 @@
                                 </td>
                             </tr>
                         </table>
-
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 text-center footer-link-group p-2">
                         <p class="mb-1 fw-bold text-uppercase small text-secondary"></p>
@@ -274,7 +326,7 @@
                     <div class="col-lg-3 col-md-3 col-sm-6 text-center text-md-end p-2 mt-2 mt-md-0">
                         <p class="mb-1 fw-bold text-uppercase small text-secondary">System Info</p>
                         <span class="badge bg-secondary rounded-pill fw-normal">iHungry SYS 1.0V BETA</span>
-                        <small class="text-white-50 d-block mt-1">&copy; 2025 Tech Solutions</small>
+                        <small class="text-white-50 d-block mt-1">&copy; WasuVa Creation</small>
                     </div>
                 </div>
             </div>

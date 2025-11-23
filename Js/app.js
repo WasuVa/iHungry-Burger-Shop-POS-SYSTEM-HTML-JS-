@@ -85,7 +85,7 @@ function updateCart() {
 function initializeCartFunctionality() {
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
     console.log('Found add-to-cart buttons:', addToCartButtons.length);
-    
+
     addToCartButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
             const card = e.target.closest('.menu-item');
@@ -93,10 +93,10 @@ function initializeCartFunctionality() {
                 console.error('Menu item card not found');
                 return;
             }
-            
+
             const name = card.dataset.name;
             const price = parseFloat(card.dataset.price);
-            
+
             console.log('Adding to cart:', name, price);
 
             const existingItem = cart.find(item => item.name === name);
@@ -107,7 +107,7 @@ function initializeCartFunctionality() {
             }
 
             updateCart();
-            
+
             const originalText = e.target.textContent;
             e.target.textContent = '✓ Added';
             e.target.classList.add('btn-success');
@@ -138,7 +138,13 @@ function initializeCartFunctionality() {
     if (placeOrderBtn) {
         placeOrderBtn.addEventListener('click', () => {
             if (cart.length === 0) {
-                alert('Cart is empty! Please add items first.');
+                Swal.fire({
+                    position: "center",
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Cart is empty! Please add items first.",
+                    footer: '<a href="#">Why do I have this issue?</a>'
+                });
                 return;
             }
 
@@ -151,19 +157,25 @@ function initializeCartFunctionality() {
 
             const totalEl = document.getElementById('total');
             const totalAmount = totalEl ? totalEl.textContent : 'Rs. 0.00';
-            
-            alert(`Order placed successfully for ${customerName.value}!\nTotal: ${totalAmount}`);
-            
+
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: `Order placed successfully for ${customerName.value}!\nTotal: ${totalAmount}`,
+                showConfirmButton: false,
+                timer: 2000
+            });
+
             cart = [];
             updateCart();
-            
+
             const orderForm = document.getElementById('orderForm');
             if (orderForm) orderForm.reset();
         });
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const bookTableButtons = document.querySelectorAll('.book-table-btn');
     const modalTableName = document.getElementById('modalTableName');
     const tableCapacity = document.getElementById('tableCapacity');
@@ -178,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     bookTableButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const tableName = this.dataset.table;
             const capacity = this.dataset.capacity;
             currentTableType = tableName;
@@ -189,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     if (confirmBookingBtn) {
-        confirmBookingBtn.addEventListener('click', function() {
+        confirmBookingBtn.addEventListener('click', function () {
             if (!bookingForm.checkValidity()) {
                 bookingForm.reportValidity();
                 return;
@@ -203,11 +215,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const specialRequests = document.getElementById('specialRequests').value;
 
             const dateObj = new Date(bookingDate);
-            const formattedDate = dateObj.toLocaleDateString('en-US', { 
-                weekday: 'long', 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric' 
+            const formattedDate = dateObj.toLocaleDateString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
             });
 
             const confirmationMessage = `
@@ -233,18 +245,18 @@ We look forward to serving you!
     }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     console.log('DOM Loaded - Initializing...');
-    
+
     updateUptime();
-    
+
     const newOrderBtn = document.getElementById('newOrderBtn');
     if (newOrderBtn) {
-        newOrderBtn.addEventListener('click', function() {
+        newOrderBtn.addEventListener('click', function () {
             window.location.href = 'oderadd.html';
         });
     }
-    
+
     initializeCartFunctionality();
 });
 
@@ -320,11 +332,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const formatTimestamp = () => {
             const now = new Date();
-            return now.toLocaleString([], { 
-                month: 'short', 
-                day: 'numeric', 
-                hour: '2-digit', 
-                minute: '2-digit' 
+            return now.toLocaleString([], {
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
             });
         };
 

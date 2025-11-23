@@ -28,14 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
             percentageEl.textContent = Math.floor(currentPercentage) + '%';
             setTimeout(updatePercentage, interval);
         } else {
-            // Once loading is complete, redirect
             setTimeout(() => {
-                // Add fade out effect
                 document.body.style.transition = 'opacity 0.5s ease-out';
                 document.body.style.opacity = '0';
                 
                 setTimeout(() => {
-                    window.location.href = 'index.html';
+                    window.location.href = 'home.html';
                 }, 500);
             }, 300);
         }

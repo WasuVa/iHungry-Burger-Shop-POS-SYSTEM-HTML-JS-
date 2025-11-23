@@ -291,7 +291,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!reports.length) {
                 reportsList.innerHTML = `
                     <div class="text-center text-muted py-5">
-                        <div class="fs-1 mb-3">📭</div>
                         <p class="mb-0">No reports logged yet.<br>Use the form to add your first entry.</p>
                     </div>
                 `;
@@ -316,10 +315,10 @@ document.addEventListener('DOMContentLoaded', function () {
                         <div class="d-flex gap-2">
                             <button class="btn btn-sm ${report.status === 'Resolved' ? 'btn-outline-secondary' : 'btn-success'}" 
                                     data-action="toggle-status">
-                                ${report.status === 'Resolved' ? '↩️ Reopen' : '✅ Mark Resolved'}
+                                ${report.status === 'Resolved'?'Reopen':'Mark Resolved'}
                             </button>
                             <button class="btn btn-sm btn-outline-danger" data-action="delete">
-                                🗑️ Delete
+                                Delete
                             </button>
                         </div>
                     </div>

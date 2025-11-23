@@ -71,106 +71,237 @@
         </div>
     </nav>
 
-    <section style="margin-left: 4%; margin-top: 2%; margin-bottom: 3%;">
-        <section class="py-4" style="margin-right:15%; margin-left: 15%; background-color: rgba(255, 255, 255, 0.1); padding: 1%; border-radius: 30px; 
-            box-shadow: 0 8px 32px 0 rgba(192, 160, 15, 0.692); backdrop-filter: blur(10px); -webkit-backdrop-filter: 
-            blur(10px); border: 1px solid rgba(255, 255, 255, 0.18);">
-            <h2 class="text-center mb-4 text-white fw-bold"
-                style="font-family: 'Indie Flower', cursive; font-size: 50px;">Takeaway Packages</h2>
-            <div class="container cotainerMY">
-                <div class="row g-4 justify-content-center">
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
-                        <div class="card flex-fill h-100">
-                            <img src="img/bgr8.jpg" class="card-img-top img-fluid" alt="Classic Cheeseburger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Classic Cheeseburger</h5>
-                                <p class="card-text">A timeless favorite featuring a beef patty, melted cheese, lettuce,
-                                    tomato, onion, and pickles on a toasted bun.</p>
-                                <!-- <button class="btn btn-warning mt-auto align-self-start" onclick="showAlert()">View</button> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
-                        <div class="card flex-fill h-100">
-                            <img src="img/bgr3.jpg" class="card-img-top img-fluid" alt="Breakfast Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Breakfast Burger</h5>
-                                <p class="card-text">Topped with a fried or sunny-side-up egg, crispy bacon and often
-                                    hash browns or a creamy sauce.</p>
-                                <!-- <button class="btn btn-warning mt-auto align-self-start">View</button> -->
-                            </div>
-                        </div>
-                    </div>
+    <main class="bg-body-tertiary py-4">
+        <div class="container-fluid cotainerMY">
+            <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+                <div>
+                    <p class="text-uppercase text-secondary small mb-1">Takeaway Orders</p>
+                    <h1 class="h3 mb-0">Quick Service Counter</h1>
+                    <p class="text-muted mb-0">Build orders for pickup and to-go customers</p>
+                </div>
+            </div>
 
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
-                        <div class="card flex-fill h-100">
-                            <img src="img/bgr2.jpg" class="card-img-top img-fluid" alt="California Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">California Burger</h5>
-                                <p class="card-text">Fresh avocado, crisp lettuce, tomato and often alfalfa sprouts for
-                                    a West Coast twist.</p>
-                                <!-- <button class="btn btn-warning mt-auto align-self-start">View</button> -->
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm border-0 mb-4">
+                        <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center">
+                            <strong>Menu Selection</strong>
+                            <div class="btn-group btn-group-sm" role="group">
+                                <button class="btn btn-outline-secondary active" data-category="all">All</button>
+                                <button class="btn btn-outline-secondary" data-category="burgers">Burgers</button>
+                                <button class="btn btn-outline-secondary" data-category="sides">Sides</button>
+                                <button class="btn btn-outline-secondary" data-category="drinks">Drinks</button>
+                            </div>
+                        </div>
+                        <div class="card-body p-3">
+                            <div class="row g-3" id="menuItems">
+                                <div class="col-sm-6 col-md-4 col-lg-3" data-category="burgers">
+                                    <div class="card h-100 menu-item" data-name="Classic Cheeseburger" data-price="850">
+                                        <img src="img/bgr8.jpg" class="card-img-top" alt="Classic Cheeseburger">
+                                        <div class="card-body p-2">
+                                            <h6 class="card-title mb-1 small">Classic Cheeseburger</h6>
+                                            <p class="text-muted mb-2 small">Rs. 850</p>
+                                            <button class="btn btn-warning btn-sm w-100 add-to-cart">
+                                                + Add
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3" data-category="burgers">
+                                    <div class="card h-100 menu-item" data-name="Breakfast Burger" data-price="950">
+                                        <img src="img/bgr3.jpg" class="card-img-top" alt="Breakfast Burger">
+                                        <div class="card-body p-2">
+                                            <h6 class="card-title mb-1 small">Breakfast Burger</h6>
+                                            <p class="text-muted mb-2 small">Rs. 950</p>
+                                            <button class="btn btn-warning btn-sm w-100 add-to-cart">
+                                                + Add
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3" data-category="burgers">
+                                    <div class="card h-100 menu-item" data-name="California Burger" data-price="1050">
+                                        <img src="img/bgr2.jpg" class="card-img-top" alt="California Burger">
+                                        <div class="card-body p-2">
+                                            <h6 class="card-title mb-1 small">California Burger</h6>
+                                            <p class="text-muted mb-2 small">Rs. 1,050</p>
+                                            <button class="btn btn-warning btn-sm w-100 add-to-cart">
+                                                + Add
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3" data-category="burgers">
+                                    <div class="card h-100 menu-item" data-name="Caramelized Onion Burger" data-price="920">
+                                        <img src="img/bgr4.jpg" class="card-img-top" alt="Caramelized Onion">
+                                        <div class="card-body p-2">
+                                            <h6 class="card-title mb-1 small">Caramelized Onion</h6>
+                                            <p class="text-muted mb-2 small">Rs. 920</p>
+                                            <button class="btn btn-warning btn-sm w-100 add-to-cart">
+                                                + Add
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3" data-category="burgers">
+                                    <div class="card h-100 menu-item" data-name="Spicy Jalapeño Burger" data-price="980">
+                                        <img src="img/bgr5.jpg" class="card-img-top" alt="Spicy Jalapeño">
+                                        <div class="card-body p-2">
+                                            <h6 class="card-title mb-1 small">Spicy Jalapeño</h6>
+                                            <p class="text-muted mb-2 small">Rs. 980</p>
+                                            <button class="btn btn-warning btn-sm w-100 add-to-cart">
+                                                + Add
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3" data-category="burgers">
+                                    <div class="card h-100 menu-item" data-name="Mushroom Swiss Burger" data-price="1100">
+                                        <img src="img/bgr6.jpg" class="card-img-top" alt="Mushroom Swiss">
+                                        <div class="card-body p-2">
+                                            <h6 class="card-title mb-1 small">Mushroom Swiss</h6>
+                                            <p class="text-muted mb-2 small">Rs. 1,100</p>
+                                            <button class="btn btn-warning btn-sm w-100 add-to-cart">
+                                                + Add
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3" data-category="burgers">
+                                    <div class="card h-100 menu-item" data-name="Bacon BBQ Burger" data-price="1150">
+                                        <img src="img/bgr7.jpg" class="card-img-top" alt="Bacon BBQ">
+                                        <div class="card-body p-2">
+                                            <h6 class="card-title mb-1 small">Bacon BBQ</h6>
+                                            <p class="text-muted mb-2 small">Rs. 1,150</p>
+                                            <button class="btn btn-warning btn-sm w-100 add-to-cart">
+                                                + Add
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3" data-category="burgers">
+                                    <div class="card h-100 menu-item" data-name="Kimchi Burger" data-price="990">
+                                        <img src="img/bgr1.jpg" class="card-img-top" alt="Kimchi Burger">
+                                        <div class="card-body p-2">
+                                            <h6 class="card-title mb-1 small">Kimchi Burger</h6>
+                                            <p class="text-muted mb-2 small">Rs. 990</p>
+                                            <button class="btn btn-warning btn-sm w-100 add-to-cart">
+                                                + Add
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3" data-category="sides">
+                                    <div class="card h-100 menu-item" data-name="French Fries" data-price="350">
+                                        <img src="img/IMG-chips/chip1.jpg" class="card-img-top" alt="French Fries">
+                                        <div class="card-body p-2">
+                                            <h6 class="card-title mb-1 small">French Fries</h6>
+                                            <p class="text-muted mb-2 small">Rs. 350</p>
+                                            <button class="btn btn-warning btn-sm w-100 add-to-cart">
+                                                + Add
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3" data-category="sides">
+                                    <div class="card h-100 menu-item" data-name="Curly Fries" data-price="400">
+                                        <img src="img/IMG-chips/chip2.jpg" class="card-img-top" alt="Curly Fries">
+                                        <div class="card-body p-2">
+                                            <h6 class="card-title mb-1 small">Curly Fries</h6>
+                                            <p class="text-muted mb-2 small">Rs. 400</p>
+                                            <button class="btn btn-warning btn-sm w-100 add-to-cart">
+                                                + Add
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3" data-category="drinks">
+                                    <div class="card h-100 menu-item" data-name="Cola" data-price="250">
+                                        <img src="img/IMG-bev/bev1.jpg" class="card-img-top" alt="Cola">
+                                        <div class="card-body p-2">
+                                            <h6 class="card-title mb-1 small">Cola</h6>
+                                            <p class="text-muted mb-2 small">Rs. 250</p>
+                                            <button class="btn btn-warning btn-sm w-100 add-to-cart">
+                                                + Add
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 col-lg-3" data-category="drinks">
+                                    <div class="card h-100 menu-item" data-name="Iced Tea" data-price="280">
+                                        <img src="img/IMG-bev/bev2.jpg" class="card-img-top" alt="Iced Tea">
+                                        <div class="card-body p-2">
+                                            <h6 class="card-title mb-1 small">Iced Tea</h6>
+                                            <p class="text-muted mb-2 small">Rs. 280</p>
+                                            <button class="btn btn-warning btn-sm w-100 add-to-cart">
+                                                + Add
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
-                        <div class="card flex-fill h-100">
-                            <img src="img/bgr4.jpg" class="card-img-top img-fluid" alt="Caramelized Onion Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Caramelized Onion Burger</h5>
-                                <p class="card-text">Slow-cooked sweet onions paired with sharp cheese for a rich,
-                                    savory bite.</p>
-                                <!-- <button class="btn btn-warning mt-auto align-self-start">View</button> -->
-                            </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card shadow-sm border-0 sticky-top" style="top: 20px;">
+                        <div class="card-header bg-warning text-dark border-0">
+                            <strong>Current Order</strong>
                         </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
-                        <div class="card flex-fill h-100">
-                            <img src="img/bgr5.jpg" class="card-img-top img-fluid" alt="Spicy Jalapeño Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Spicy Jalapeño Burger</h5>
-                                <p class="card-text">Featuring fresh or pickled jalapeños, pepper jack and a spicy aioli
-                                    for heat.</p>
-                                <!-- <button class="btn btn-warning mt-auto align-self-start">View</button> -->
+                        <div class="card-body">
+                            <form id="orderForm">
+                                <div class="mb-3">
+                                    <label for="customerName" class="form-label small fw-semibold">Customer Name</label>
+                                    <input type="text" class="form-control" id="customerName" 
+                                           placeholder="Enter name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="customerPhone" class="form-label small fw-semibold">Phone Number</label>
+                                    <input type="tel" class="form-control" id="customerPhone" 
+                                           placeholder="Enter phone" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="pickupTime" class="form-label small fw-semibold">Pickup Time</label>
+                                    <select class="form-select" id="pickupTime" required>
+                                        <option value="">Select time...</option>
+                                        <option value="ASAP">ASAP (10-15 mins)</option>
+                                        <option value="30mins">In 30 minutes</option>
+                                        <option value="1hour">In 1 hour</option>
+                                        <option value="custom">Custom time</option>
+                                    </select>
+                                </div>
+                            </form>
+
+                            <hr>
+
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <strong class="small">Order Items</strong>
+                                    <button class="btn btn-sm btn-outline-danger" id="clearCartBtn">Clear</button>
+                                </div>
+                                <div id="cartItems" style="max-height: 300px; overflow-y: auto;">
+                                    <p class="text-muted text-center py-4 small">Cart is empty</p>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
-                        <div class="card flex-fill h-100">
-                            <img src="img/bgr6.jpg" class="card-img-top img-fluid" alt="Mushroom Swiss Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Mushroom Swiss Burger</h5>
-                                <p class="card-text">Sautéed mushrooms and melted Swiss cheese with garlicky or herby
-                                    mayo.</p>
-                                <!-- <button class="btn btn-warning mt-auto align-self-start">View</button> -->
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between pt-2 border-top">
+                                    <strong>Total:</strong>
+                                    <strong class="text-success" id="total">Rs. 0.00</strong>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
-                        <div class="card flex-fill h-100">
-                            <img src="img/bgr7.jpg" class="card-img-top img-fluid" alt="Bacon BBQ Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Bacon BBQ Burger</h5>
-                                <p class="card-text">Smoky bacon with sweet-savory BBQ sauce and cheddar cheese.</p>
-                                <!-- <button class="btn btn-warning mt-auto align-self-start">View</button> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
-                        <div class="card flex-fill h-100">
-                            <img src="img/bgr1.jpg" class="card-img-top img-fluid" alt="Kimchi Burger">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Kimchi Burger</h5>
-                                <p class="card-text">A fusion burger topped with crunchy fried kimchi and spicy-tangy
-                                    sauce.</p>
-                                <!-- <button class="btn btn-warning mt-auto align-self-start">View</button> -->
+
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-success" id="placeOrderBtn">
+                                    Place Takeaway Order
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </section>
+        </div>
+    </main>
 
     <section>
         <footer class="footer mt-auto py-3 bg-deep-dark shadow-lg">
@@ -224,7 +355,9 @@
         </footer>
     </section>
 
-    <script src="Js/app.js"></script>
+    <!-- <script src="Js/app.js"></script> -->
+    <script src="Js/takeaway.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

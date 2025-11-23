@@ -404,3 +404,29 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 })();
 
+document.addEventListener('DOMContentLoaded', () => {
+    const categoryButtons = document.querySelectorAll('[data-category]');
+    const menuItems = document.querySelectorAll('#menuItems > div[data-category]');
+
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            const category = button.dataset.category;
+            menuItems.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    const originalUpdateCart = window.updateCart;
+    if (originalUpdateCart) {
+        window.updateCart = customUpdateCart;
+    }
+});
+

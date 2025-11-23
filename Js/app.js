@@ -347,7 +347,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const details = (data.get('report') || '').toString().trim();
 
             if (!customer || !orderId || !details) {
-                alert('⚠️ Please fill out all fields before submitting.');
+                alert('Please fill out all fields before submitting.');
                 return;
             }
 
